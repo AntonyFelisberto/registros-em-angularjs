@@ -1,20 +1,22 @@
-var app = angular.module("myApp",['ng-route']);
+var app = angular.module("myApp",['ngRoute']);
 
 app.config(['$routeProvider',function($routeProvider){
-    $routeProvider.
-        when('/login',{
-            temmplateUrl:"views/login.html",
-            controller:"RegistrationController"
-        }).
-        when('/register',{
-            temmplateUrl:"views/register.html",
-            controller:"RegistrationController"
-        }).
-        when('/sucess',{
-            temmplateUrl:"views/sucess.html",
-            controller:"SucessController"
-        }).
-        otherwise({
-            redirecTo:'/login'
-        })
-}])
+  $routeProvider.
+    when('/login',{
+      templateUrl:"views/login.html",
+      controller:"RegistrationController"
+    }).
+    when('/register', {
+      templateUrl: 'views/register.html',
+      controller: 'RegistrationController'
+    }).
+    when('/success', {
+      templateUrl: 'views/success.html',
+      controller: 'SuccessController'
+    }).
+    otherwise({
+      redirectTo: '/login'
+    });
+}]);
+
+
