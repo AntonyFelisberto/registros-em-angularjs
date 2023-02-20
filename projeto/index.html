@@ -38,14 +38,16 @@
 
     <!--ADICIONANDO O ANGULAR FIREBASE-->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-
+    
     <!--TODA VEZ QUE CRIAR UM NOVO JAVASCRIPT PRO ANGULAR TEM QUE COLOCA LO AQUI-->
     <script src="js/app.js"></script>
     <script src="js/controllers/registration.js"></script>
     <script src="js/controllers/success.js"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="cf" ng-include="'views/nav.html'"></nav> <!--ng-include FARA APARECER UM HTML, PARA USA LO TEMOS QUE COLOCAR '' DENTRO DAS ASPAS OU O CONTRARIO, E DIZER QUAL A PAGINA QUE QUEREMOS QUE APAREÇA-->
+    </header>
     <div class="page">
       <!--ng-view SERVE PARA MAPEAR AS ROTAS DO ANGULAR-->
       <main class="cf" ng-view></main>
